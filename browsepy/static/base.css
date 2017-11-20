@@ -6,6 +6,11 @@
   font-style: normal;
 }
 
+@font-face {
+   font-family: 'eurostile-bold-extended';
+   src: url('fonts/eurostile-bold-extended.otf');
+}
+
 .button:after,
 .icon:after,
 .sorting:after,
@@ -26,9 +31,10 @@ html {
 }
 
 body {
-  font-family: sans;
-  font-size: 0.75em;
-  padding: 3.5em 1em 3.5em;
+  /*font-family: sans;*/
+  font-family: eurostile-bold-extended;
+  font-size: 0.85em;
+  padding: 1.5em 1em 3.5em;
   margin: 0;
   min-height: 100%;
 }
@@ -135,10 +141,11 @@ table.browser tr:nth-child(2n) {
 table.browser th,
 table.browser td {
   margin: 0;
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
   white-space: nowrap;
   padding: 5px;
+  border-left: 1px solid #aaa;
 }
 
 table.browser th {
@@ -168,7 +175,7 @@ h1 {
   padding: 0 0 0.3em;
   display: block;
   color: black;
-  text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 0 0 white, -1px 0 0 white, 0 -1px 0 white, 0 1px 0 white, 2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 2px 1px 0 black, -2px 1px 0 black, 1px 2px 0 black, 1px -2px 0 black, 2px -1px 0 black, -2px -1px 0 black, -1px 2px 0 black, -1px -2px 0 black;
+  /*text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 0 0 white, -1px 0 0 white, 0 -1px 0 white, 0 1px 0 white, 2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 2px 1px 0 black, -2px 1px 0 black, 1px 2px 0 black, 1px -2px 0 black, 2px -1px 0 black, -2px -1px 0 black, -1px 2px 0 black, -1px -2px 0 black;*/
 }
 
 ol.path,
@@ -312,8 +319,8 @@ html.autosubmit-support form.autosubmit label {
   text-align: center;
   border-radius: 0.25em;
   border: 1px solid gray;
-  box-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
-  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 0 0 black, -1px 0 0 black, 0 -1px 0 black, 0 1px 0 black;
+  /*box-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;*/
+  /*text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 0 0 black, -1px 0 0 black, 0 -1px 0 black, 0 1px 0 black;*/
 }
 
 a.button:active,

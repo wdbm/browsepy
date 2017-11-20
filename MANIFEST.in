@@ -1,4 +1,4 @@
-include README.rst
+include README.md
 graft browsepy/templates
 graft browsepy/static
 graft browsepy/plugin/player/templates

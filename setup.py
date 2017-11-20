@@ -41,7 +41,7 @@ __import__('__meta__')
 meta = sys.modules['__meta__']
 sys.path[:] = sys_path
 
-with open('README.rst') as f:
+with open('README.md') as f:
     meta_doc = f.read()
 
 extra_requires = []

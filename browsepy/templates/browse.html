@@ -103,10 +103,10 @@
     <table class="browser">
         <thead>
             <tr>
-              {{ th('Name', 'text', 'text', 3) }}
-              {{ th('Mimetype', 'type') }}
-              {{ th('Modified', 'modified', 'numeric') }}
-              {{ th('Size', 'size', 'numeric') }}
+              {{ th('name', 'text', 'text', 3) }}
+              {{ th('size', 'size', 'numeric') }}
+              {{ th('mimetype', 'type') }}
+              {{ th('modified', 'modified', 'numeric') }}
             </tr>
         </thead>
         <tbody>
@@ -120,9 +120,9 @@
                       <td></td>
                     {% endif %}
                     <td>{{ draw_widgets(f, 'entry-actions') }}</td>
+                    <td>{{ f.size or '' }}</td>
                     <td>{{ f.type or '' }}</td>
                     <td>{{ f.modified or '' }}</td>
-                    <td>{{ f.size or '' }}</td>
                 </tr>
             {% endfor %}
         </tbody>
