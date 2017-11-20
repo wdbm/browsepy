@@ -1,5 +1,7 @@
 # browsepy
 
+![](https://raw.githubusercontent.com/wdbm/browsepy/master/media/browsepy.png)
+
 This is a web file browser that uses Flask and is compatible with Python 3.5. It is a fork of [browsepy](https://github.com/ergoithz/browsepy) by Felipe A. Hernandez.
 
 # setup
