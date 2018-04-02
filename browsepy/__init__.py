@@ -283,6 +283,16 @@ def upload(path):
     return redirect(url_for(".browse", path=directory.urlpath))
 
 
+@app.route("/robots.txt", methods=["GET"])
+def robots():
+    try:
+        response = make_response("User-agent: *\nDisallow: /")
+        response.headers["Content-type"] = "text/plain"
+        return response
+    except:
+        pass
+
+
 @app.route("/")
 def index():
     path = app.config["directory_start"] or app.config["directory_base"]
