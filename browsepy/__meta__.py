@@ -3,10 +3,10 @@
 
 app = 'browsepy'
 description = 'Simple web file browser'
-version = '0.5.6'
+version = '2018.08.13.2028'
 license = 'MIT'
-author_name = 'Felipe A. Hernandez'
-author_mail = 'ergoithz@gmail.com'
+author_name = 'Will Breaden Madden'
+author_mail = 'wbm@protonmail.ch'
 author = '%s <%s>' % (author_name, author_mail)
-url = 'https://github.com/ergoithz/browsepy'
+url = 'https://github.com/wdbm/browsepy'
 tarball = '%s/archive/%s.tar.gz' % (url, version)

@@ -161,6 +161,29 @@ def filter_union(*functions):
     return None
 
 
+def WSGI(argv=[]):
+    parser = ArgParse
+    plugin_manager = app.extensions['plugin_manager']
+    args = plugin_manager.load_arguments(argv, parser())
+    patterns = args.exclude + collect_exclude_patterns(args.exclude_from)
+    app.config.update(
+        directory_base=args.directory,
+        directory_start=args.initial or args.directory,
+        directory_remove=args.removable,
+        directory_upload=args.upload,
+        plugin_modules=list_union(
+            app.config['plugin_modules'],
+            args.plugin,
+            ),
+        exclude_fnc=filter_union(
+            app.config['exclude_fnc'],
+            create_exclude_fnc(patterns, args.directory),
+            ),
+        )
+    plugin_manager.reload()
+    return app
+
+
 def main(argv=sys.argv[1:], app=app, parser=ArgParse, run_fnc=flask.Flask.run):
     plugin_manager = app.extensions['plugin_manager']
     args = plugin_manager.load_arguments(argv, parser())
